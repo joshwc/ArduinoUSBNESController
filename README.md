@@ -1,4 +1,4 @@
-# usbNESController
+# ArduinoUSBNESController
 NES controller to USB gamepad with Arduino Leonardo
 
 Converts the output of 2 NES controllers into USB HID input 

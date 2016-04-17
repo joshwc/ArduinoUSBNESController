@@ -16,7 +16,7 @@ const int DataPin2 = 6;
 #define wait delayMicroseconds(6)
 #define read1 digitalRead(DataPin1)
 #define read2 digitalRead(DataPin2)
-// Current Controller Data
+
 byte controllerData1 = 0;
 byte controllerData2 = 0;
 
@@ -32,6 +32,7 @@ void setup() {
 
   pinMode(LatchPin, OUTPUT);
   pinMode(ClockPin, OUTPUT);
+  
   //Set inputs to pullup to stop noise if
   //the controller is unpluged
   pinMode(DataPin1, INPUT_PULLUP);
@@ -49,7 +50,7 @@ void ControllerRead() {
   controllerData1 = read1;
   controllerData2 = read2;
 
-  for (int i = 0; i < 7; i++) { //save states on next 7 buttons
+  for (int i = 0; i < 7; i++) { //save states of next 7 buttons
     clockHigh;
     wait;
     //shift bits left for incoming bit
